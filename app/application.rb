@@ -35,8 +35,7 @@ class Application
         end
         else resp.write "Path Not Found"
       end
-      resp.finish
-    end
+
 
 
   def handle_search(search_term)
