@@ -3,7 +3,6 @@ class Application
   @@items = ["Apples","Carrots","Pears"]
   @@cart=[]
 
-
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
@@ -30,7 +29,7 @@ class Application
 
           if @@items.include?(add_term)
              @@cart<<add_term
-             resp.write "added #{add_term}\n" 
+             resp.write "added #{add_term}\n"
            else
             resp.write "We don't have that item"
         end
