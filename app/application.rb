@@ -24,7 +24,9 @@ class Application
           resp.write handle_search(search_term)
         end
         if req.path.match(/add/)
+
           add_term = req.params["q"]
+
           @@cart<<add_term
         end
         resp.write "Path Not Found"
