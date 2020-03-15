@@ -28,11 +28,11 @@ class Application
 
           add_term = req.params["q"]
 
-          if @@items.none?
-            resp.write "We don't have that item"
-          elsif @@items.include?(add_term)
+          if @@items.include?(add_term)
              @@cart<<add_term
              resp.write "added #{added_term}\n"
+           else
+            resp.write "We don't have that item" 
         end
         else resp.write "Path Not Found"
       end
