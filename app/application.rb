@@ -30,7 +30,7 @@ class Application
 
           if @@items.include?(add_term)
              @@cart<<add_term
-             resp.write "added #{add_term}" 
+             resp.write "added #{add_term}\n" 
            else
             resp.write "We don't have that item"
         end
