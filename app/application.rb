@@ -15,10 +15,6 @@ class Application
         @@cart.each do |c|
           resp.write "#{c}\n"
         end
-        if req.path.match(/add/)
-          add_term=req.params["q"]
-          @@item<<add_term
-        end
         if req.path.match(/items/)
           @@items.each do |item|
             resp.write "#{item}\n"
