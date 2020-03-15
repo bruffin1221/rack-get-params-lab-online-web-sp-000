@@ -25,7 +25,7 @@ class Application
         end
         if req.path.match(/add/)
           add_term = req.params["q"]
-          @@item<<add_term
+          @@cart<<add_term
         end
         resp.write "Path Not Found"
       end
