@@ -26,12 +26,13 @@ class Application
 
       elsif req.path.match(/add/)
 
-          add_term = req.params["add_term"]
+          add_term = req.params["q"]
 
           if @@items.include?(add_term)
              @@cart<<add_term
              resp.write "added #{item}\n"
-          else resp.write "We don't have that item"
+          else
+            resp.write "We don't have that item"
         end
         resp.write "Path Not Found"
       end
