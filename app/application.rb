@@ -28,8 +28,9 @@ class Application
 
           add_term = req.params["q"]
 
-          if @@items.none?             
+          if @@items.none?
             esp.write "We don't have that item"
+          end
           elsif @@items.include?(add_term)
              @@cart<<add_term
              resp.write "added #{item}\n"
