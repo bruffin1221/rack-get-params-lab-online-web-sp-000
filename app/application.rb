@@ -30,13 +30,11 @@ class Application
 
           if @@items.none?
             esp.write "We don't have that item"
-          end
           elsif @@items.include?(add_term)
              @@cart<<add_term
              resp.write "added #{item}\n"
-          else
         end
-        resp.write "Path Not Found"
+        else resp.write "Path Not Found"
       end
       resp.finish
     end
