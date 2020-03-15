@@ -29,6 +29,7 @@ class Application
 
           if @@item.include?(add_term)
             resp.write "We don't have that item"
+          end
           elsif @@cart<<add_term
           resp.write "added #{add_term}\n"
         end
