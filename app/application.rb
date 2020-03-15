@@ -28,7 +28,7 @@ class Application
           add_term = req.params["q"]
 
           @@cart<<add_term
-          resp.write "added #{add_term}"
+          resp.write "added #{add_term}\n"
         end
         resp.write "Path Not Found"
       end
